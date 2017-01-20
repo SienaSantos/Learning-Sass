@@ -80,7 +80,7 @@ nav {
   text-align: center; }
   .banner .content {
     position: absolute;
-    top: 30%;
+    top: 40%;
     width: 100%; }
   .banner img {
     width: 100%; }
@@ -91,8 +91,9 @@ nav {
     font-weight: bold; }
     @media screen and (min-width: 1200px) {
       .banner span {
-        font-size: 68px; } }
+        font-size: 3.5em; } }
   .banner span.sub-title {
+    font-size: 25px;
     font-weight: normal;
     margin-bottom: 30px; }
   @media screen and (min-width: 1200px) {
