@@ -1,22 +1,6 @@
 @import "variable";
 // Outer navigation wrapper
 
-
-// Logo and branding
-.brand {
-  position: absolute;
-  padding-left: 20px;
-  float: left;
-  line-height: $nav-height;
-  text-transform: uppercase;
-  font-size: 1.4em;
-  a,
-  a:visited {
-    color: darken($white, 3);
-    text-decoration: none;
-  }
-}
-
 // Navigation
 nav {
   float: right;
@@ -103,7 +87,7 @@ nav {
 }
 @media screen and (min-width: $MinMobile) {
   .nav-list {
-    display: block !important;
+    display: none;
   }
 }
 #nav-toggle {
