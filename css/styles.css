@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Varela+Round");
 body {
   font-family: 'Varela Round', sans-serif;
@@ -8,7 +9,8 @@ html, body, ul, ol, li, form, fieldset, legend {
   padding: 0; }
 
 h1, h2, h3, h4, h5, h6, p {
-  margin-top: 0; }
+  margin-top: 0;
+  font-family: 'Open Sans', sans-serif; }
 
 fieldset, img {
   border: 0; }
@@ -18,7 +20,6 @@ li {
 
 .wrapper {
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
@@ -29,7 +30,7 @@ li {
 
 /* VARIABLES */
 .navigation {
-  height: 70px;
+  height: 80px;
   background: #fff;
   border-bottom: 1px solid #999;
   position: fixed;
@@ -44,7 +45,7 @@ li {
   position: absolute;
   padding-left: 20px;
   float: left;
-  line-height: 70px;
+  line-height: 80px;
   font-size: 1em; }
   .logo a,
   .logo a:visited {
@@ -67,7 +68,7 @@ nav {
       nav ul li a {
         display: block;
         padding: 0 20px;
-        line-height: 70px;
+        line-height: 80px;
         background: #fff;
         color: #222;
         text-decoration: none; }
@@ -85,18 +86,139 @@ nav {
   .banner img {
     width: 100%; }
   .banner span {
-    font-size: 42px;
+    font-size: 4.5em;
     display: block;
     text-transform: uppercase;
     font-weight: bold; }
-    @media screen and (min-width: 1200px) {
-      .banner span {
-        font-size: 3.5em; } }
   .banner span.sub-title {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: normal;
     margin-bottom: 30px; }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) and (max-width: min-width) {
     .banner {
       max-height: 640px;
       overflow: hidden; } }
+  .banner .fore-bird {
+    width: 960px;
+    height: 733px;
+    background-image: url(../img/fore-bird.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    position: absolute;
+    left: 50%;
+    margin-left: -480px;
+    top: 330px; }
+  .banner .back-bird {
+    width: 960px;
+    height: 298px;
+    background-image: url(../img/back-bird.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    position: absolute;
+    left: 50%;
+    top: 90px;
+    margin-left: -480px; }
+
+@media screen and (max-width: 1500px) {
+  section {
+    padding: 70px 350px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center; }
+    section h1 {
+      font-size: 3rem;
+      color: #ccc;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      font-weight: 300; }
+    section p {
+      font-size: 1rem;
+      margin: 20px; }
+    section hr {
+      margin-top: 3rem;
+      margin-bottom: 3.5rem;
+      border-width: 0;
+      border-top: 1px solid #E1E1E1; } }
+
+@media screen and (min-width: 280px) and (max-width: 750px) {
+  section {
+    padding: 70px 0px; } }
+
+#firstSection {
+  position: relative;
+  background-color: #333; }
+
+footer {
+  background: #222;
+  color: #fff;
+  padding: 40px 0;
+  min-height: 200px;
+  bottom: 0;
+  width: 100%;
+  z-index: -1; }
+  footer .footer-stuff {
+    max-width: 640px;
+    margin: 0 auto; }
+  @media screen and (max-width: 1500px) {
+    footer .item {
+      float: left;
+      width: 30.66667%;
+      margin-right: 4%;
+      margin-bottom: 4%; }
+      footer .item:nth-child(3n) {
+        margin-right: 0; }
+      footer .item ul {
+        margin-top: 15px; }
+      footer .item a {
+        color: #e8e8e8;
+        text-decoration: none; }
+      footer .item input {
+        color: #999;
+        height: 38px;
+        padding: 6px 12px;
+        background-color: #fff;
+        border: 1px solid #D1D1D1;
+        border-radius: 4px;
+        box-shadow: none;
+        box-sizing: border-box; }
+      footer .item .button {
+        cursor: pointer;
+        background-color: #1EAEDB;
+        color: #fff;
+        float: right;
+        border-color: #1ca0c9; }
+        footer .item .button:hover {
+          background-color: #34bae3; } }
+  @media screen and (min-width: 280px) and (max-width: 750px) {
+    footer .item {
+      width: 100%;
+      text-align: center; } }
+
+#gallery .img {
+  display: block; }
+
+#gallery .image {
+  float: left;
+  width: 32%;
+  margin-right: 2%;
+  margin-bottom: 2%; }
+  #gallery .image:nth-child(3n) {
+    margin-right: 0; }
+  #gallery .image img {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+    height: 240px;
+    width: 100%; }
+    #gallery .image img:hover {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1); }
+  @media screen and (min-width: 280px) and (max-width: 750px) {
+    #gallery .image {
+      width: 100%;
+      text-align: center; }
+      #gallery .image img {
+        height: 320px;
+        width: 90%; } }

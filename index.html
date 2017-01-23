@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sample Website</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="dist/css/styles.min.css">
   </head>
   <body>
     <header>
@@ -28,45 +29,113 @@
 
       </div>
       <div class="banner">
-        <img src="img/bird-bg.jpg" alt="">
-          <div class="content">
-            <span class="title">BLACK BIRD</span>
-            <span class="sub-title">clothing</span>
-          </div>
+        <div class="back-bird"></div>
+        <div class="content">
+          <span class="title">BLACK BIRD</span>
+          <span class="sub-title">clothing</span>
+        </div>
+
+        <div class="fore-bird"></div>
       </div>
     </header>
 
-    <section>
-      <div class="container">
-        <h1>Header 1</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <section id="firstSection" class="col">
+      <div class="wrapper">
+        <h1>Unique Style</h1>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
       </div>
     </section>
-    <section>
-      <div class="container">
-        <h1>Header 2</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-    </section>
-    <div class="gallery">
-      <img src="img/bird-bg.jpg" alt="">
-        <div class="content">
-          <span class="title">Lorem ipsum dolor sit amet</span>
-          <span class="sub-title">dolor sit amet</span>
+    <section id="gallery">
+      <div class="wrapper">
+        <div class="clothes">
+          <div class="image"><img src="img/model1.jpg">
+            <small>BlackBird Sweater - <strong>$135</strong></small>
+          </div>
+          <div class="image"><img src="img/model2.jpg">
+            <small>BlackBird Trousers - <strong>$135</strong></small>
+          </div>
+          <div class="image"><img src="img/model3.jpg">
+            <small>BlackBird Jacket - <strong>$135</strong></small>
+          </div>
+          <div class="image"><img src="img/model2.jpg">
+            <small>BlackBird Trousers - <strong>$135</strong></small>
+          </div>
+          <div class="image"><img src="img/model3.jpg">
+            <small>BlackBird Jacket - <strong>$135</strong></small>
+          </div>
+          <div class="image"><img src="img/model1.jpg">
+            <small>BlackBird Sweater - <strong>$135</strong></small>
+          </div>
+          <div class="image"><img src="img/model3.jpg">
+            <small>BlackBird Jacket - <strong>$135</strong></small>
+          </div>
+          <div class="image"><img src="img/model1.jpg">
+            <small>BlackBird Sweater - <strong>$135</strong></small>
+          </div>
+          <div class="image"><img src="img/model2.jpg">
+            <small>BlackBird Trousers - <strong>$135</strong></small>
+          </div>
         </div>
-    </div>
-    <section>
-      <div class="container">
-        <h1>Header 3</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
     </section>
     <section>
-      <div class="container">
-        <h1>Header 4</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="wrapper">
+        <h1>Fine Tailoring</h1>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
       </div>
     </section>
 
+    <section>
+      <div class="wrapper">
+        <h1>Header 3</h1>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
+      </div>
+    </section>
+    <section>
+      <div class="wrapper">
+        <h1>Header 4</h1>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="row footer-stuff">
+        <div class="item"><strong>FIND US ON</strong>
+          <ul>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="item"><strong>OTHER SHOPS</strong>
+          <ul>
+            <li><a href="#">Red Robin</a></li>
+            <li><a href="#">Emerald Eagle</a></li>
+            <li><a href="#">Crimson Crane</a></li>
+            <li><a href="#">Auburn Abbot</a></li>
+          </ul>
+        </div>
+        <div class="item">
+          <p><strong>Sign Up for the newsletter</strong><br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </p>
+          <form>
+            <div class="item-input">
+              <input type="email" placeholder="Your Email">
+            </div>
+            <div class="item-input">
+              <input class="button" type="submit">
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </html>

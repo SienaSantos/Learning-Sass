@@ -1,6 +1,7 @@
 @import "reset";
 @import "variable";
 @import "mixins";
+@import "nav";
 
 .navigation {
   height: $nav-height;
@@ -10,7 +11,8 @@
   width: 100%;
   z-index: 1;
   @include clearFix;
-}
+
+}//navigation
 
 // Logo and branding
 .logo {
@@ -30,7 +32,7 @@
 .nav-container {
   max-width: $content-width;
   margin: 0 auto;
-}
+}//nav-container
 
 nav {
   float: right;
@@ -57,11 +59,106 @@ nav {
 }//nav
 
 .banner{
-  @include banner;
   text-align: center;
-}
-// 
-// .gallery{
-//   @include banner;
-//   text-align: center;
-// }
+  @include mQ($breakpoint){
+    @include banner;
+    @include bgBird;
+  }
+  @include mQ($MinMobile, $MaxMobile){
+    .fore-bird, .back-bird {
+      background:{
+        image: none;
+      }
+      width: 0px;
+    }
+  }
+}//banner
+
+section{
+  @include clearFix;
+  @include mQ($breakpoint){
+    padding: $sectionPadding;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    @include pageSection;
+  }
+
+  @include mQ($MinMobile, $MaxMobile){
+    padding: 70px 0px;
+  }
+}//section
+
+#firstSection{
+  position: relative;
+  background-color: $offWhite;
+}//firstSection
+
+footer{
+  background: $black;
+  color: $white;
+  padding: 40px 0;
+  min-height: $footerHeight;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  @include mQ($MinMobile, $MaxMobile){
+    min-height: 400px;
+  }
+  .footer-stuff{
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .item{
+    @include mQ($breakpoint){
+      @include grid(3, 4%);
+      ul{
+        margin-top: 15px;
+      }
+
+      a{
+        color: darken($white, 9);
+        text-decoration: none;
+      }
+      input{
+        @include input;
+      }
+      .button{
+        @include button;
+      }
+    }
+    @include mQ($MinMobile, $MaxMobile){
+      @include grid(1, 2%);
+    }
+
+  }
+
+}//footer
+
+#gallery{
+  min-height: 100px;
+  .img{
+    display: block;
+  }
+  .image{
+    @include grid(3, 2%);
+    img{
+      transform: scale(1);
+      transition: all 0.3s ease-in-out;
+      height: 240px;
+      width: 100%;
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+    @include mQ($MinMobile, $MaxMobile){
+      @include grid(1 , 5%);
+      img{
+        height: 320px;
+        width: 90%;
+      }
+
+    }
+  }
+}//gallery
