@@ -158,6 +158,12 @@
   }
 }
 
+@mixin tablet(){
+  @media screen and (min-width: 750px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
 @mixin mQ($args...){
   @if length($args) == 1{
     @media screen and (max-width: nth($args, 1)){
@@ -169,4 +175,14 @@
       @content;
     }
   }
+
+  @if length($args) == 2{
+    @media screen and (min-width: 750px) and (max-width: 1024px){
+      @content;
+      .content{
+        top :28%;
+      }
+    }
+  }
+
 }

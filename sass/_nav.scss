@@ -49,7 +49,7 @@ nav {
   top: 0;
   right: 0;
   background: $white;
-  height: $nav-height;
+  height: 78px;
   width: $nav-height;
   @include mQ($MinMobile, $MaxMobile){
     display: block;
@@ -90,7 +90,7 @@ nav {
 #nav-toggle {
   position: absolute;
   left: 18px;
-  top: 22px;
+  top: 26px;
   cursor: pointer;
   padding: 10px 35px 16px 0px;
   span,
@@ -98,9 +98,9 @@ nav {
   span:after {
     cursor: pointer;
     border-radius: 1px;
-    height: 5px;
+    height: 2px;
     width: 35px;
-    background: darken($white, 3);
+    background: $black;
     position: absolute;
     display: block;
     content: '';

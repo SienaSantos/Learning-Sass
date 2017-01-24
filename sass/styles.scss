@@ -2,6 +2,7 @@
 @import "variable";
 @import "mixins";
 @import "nav";
+@import "helpers";
 
 .navigation {
   height: $nav-height;
@@ -84,7 +85,7 @@ section{
     @include pageSection;
   }
 
-  @include mQ($MinMobile, $MaxMobile){
+  @include mQ($MinMobile, $MaxMobile) {
     padding: 70px 0px;
   }
 }//section
@@ -103,10 +104,14 @@ footer{
   bottom: 0;
   width: 100%;
   z-index: -1;
+  strong{
+    color : saturate($white, 4);
+  }
   @include mQ($MinMobile, $MaxMobile){
     min-height: 400px;
   }
   .footer-stuff{
+      @include clearFix;
     max-width: 640px;
     margin: 0 auto;
   }
@@ -137,7 +142,18 @@ footer{
 
 }//footer
 
+.reference{
+  padding-top: 20px;
+  color: darken($gray, 5);
+  a{
+    text-decoration: none;
+    color: (darken($white, 9));
+  }
+
+}
+
 #gallery{
+  @include clearFix;
   min-height: 100px;
   .img{
     display: block;
@@ -149,9 +165,13 @@ footer{
       transition: all 0.3s ease-in-out;
       height: 240px;
       width: 100%;
+      padding: 13px 0px;
       &:hover{
         transform: scale(1.1);
       }
+    }
+    small{
+      position: relative;
     }
     @include mQ($MinMobile, $MaxMobile){
       @include grid(1 , 5%);
@@ -163,3 +183,77 @@ footer{
     }
   }
 }//gallery
+
+.large-window{
+  height: 640px;
+  background:{
+    image: url(../../img/model2.jpg);
+    position: center 0px;
+    repeat: repeat-y;
+    attachment: fixed;
+  }
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border-radius: 50%;
+  position: relative;
+
+  .window-tint{
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+  }
+
+  .promo-text{
+    color: white;
+    font-weight: 100;
+    font-size: 50px;
+    line-height: 1.2;
+    strong{
+      display: block;
+      font-size: 30px;
+    }
+
+    span{
+      font:{
+        weight: 300;
+        size: 18px;
+        style: italic;}
+      color: rgba(255,255,255,0.6);
+    }
+
+    .window-cta{
+      font-size: 20px;
+      text-decoration: none;
+      color: white;
+      border: 1px solid white;
+      border-radius: 5px;
+      padding: 10px 20px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover{
+        background: white;
+        color: black;}
+      }
+  }//promotext
+}//large-window
+
+#blog-post{
+  @include clearFix;
+  .post{
+    @include grid(3, 2%);
+    border: 1px solid #e1e1e1;
+    padding: 20px 13px 0;
+    background: white;
+    position: relative;
+    img{ width : 100%; }
+  }
+
+}
